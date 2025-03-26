@@ -4,13 +4,13 @@ import { promises as fsPromises } from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-import ext_package from '../package.json' with { type: 'json' }
+import ext_package from './package.json' with { type: 'json' }
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const INPUT_DIR = path.join(__dirname, '../build')
-const DEST_DIR = path.join(__dirname, '../package')
+const INPUT_DIR = path.join(__dirname, './build')
+const DEST_DIR = path.join(__dirname, './package')
 
 const ensureDirectoryExists = async (dir) => {
   try {
