@@ -1,0 +1,50 @@
+{
+  "name": "vue-chrome-extension",
+  "displayName": "vue-chrome-extension",
+  "version": "0.0.0",
+  "author": "Jules Begouen",
+  "description": "",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "vue",
+    "vite",
+    "create-chrome-ext"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/",
+    "zip": "npm run build && node zip.js"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.32",
+    "@tailwindcss/vite": "^4.0.16",
+    "@types/chrome": "^0.0.312",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.5.0",
+    "@vue/tsconfig": "^0.7.0",
+    "archiver": "^7.0.1",
+    "eslint": "^9.23.0",
+    "eslint-plugin-vue": "~10.0.0",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "3.5.3",
+    "tailwindcss": "^4.0.16",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^2.2.8"
+  }
+}

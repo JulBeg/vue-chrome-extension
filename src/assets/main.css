@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+:root {
+  --bg-color-dark: var(--color-zinc-900);
+  --bg-color-light: var(--color-zinc-50);
+
+  color-scheme: light dark;
+  background-color: var(--bg-color-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: var(--bg-color-light);
+  }
+}
+
+body {
+  font-size: 100%;
+}
