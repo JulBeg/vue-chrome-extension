@@ -38,7 +38,6 @@ export default defineManifest((env) => ({
     },
   ],
   permissions: ['sidePanel', 'storage', 'tabs'],
-  host_permissions: ['<all_urls>'],
   chrome_url_overrides: {
     newtab: 'src/newtab/newtab.html',
   },

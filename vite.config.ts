@@ -7,14 +7,6 @@ import vueDevtools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    port: 8888,
-    strictPort: true,
-    hmr: {
-      port: 8889,
-      overlay: true,
-    },
-  },
   build: {
     cssCodeSplit: true,
     emptyOutDir: true,
@@ -26,6 +18,11 @@ export default defineConfig({
     },
   },
   plugins: [vue(), vueDevtools(), crx({ manifest }), tailwindcss()],
+  server: {
+    cors: {
+      origin: [/chrome-extension:\/\//],
+    },
+  },
   legacy: {
     skipWebSocketTokenCheck: true,
   },
